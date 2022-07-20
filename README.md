@@ -8,7 +8,7 @@
 
 - 프론트엔드
 
-  - HTML
+  - Pug
   - SCSS(Webpack)
   - Vanilla JS
 
@@ -16,9 +16,10 @@
 
   - NodeJS, Express
 
-- 배포 및 그외
+- 배포 및 유틸리티
   - Heroku
   - Babel
+  - Nodemon
 
 ## 페이지구성
 
@@ -30,6 +31,7 @@
 
 ## 기능
 
+- 반응형 웹페이지
 - KOR/ENG Mode
 - Ligth/Dark Mode
 
