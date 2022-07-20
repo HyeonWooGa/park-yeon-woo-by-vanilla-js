@@ -9,10 +9,13 @@ const app = express();
 // 서버 활성화 및 서버 활성화시 콜백함수 호출
 app.listen(4000, handleListening);
 
-// GET 요청(request)에 반응(response)
-app.get("/", middleware, handleGetHome);
+// 글로벌 미들웨어
+app.use(handleSeeUrl);
 
-// 아래에 콜백함수 함수선언식으로 정의, 호이스팅 이용
+// GET 요청(request)에 반응(response)
+app.get("/", handleGetHome);
+
+// --- 아래에 콜백함수 함수선언식으로 정의, 호이스팅 이용
 
 // 서버 활성화시 터미널에 메세지 및 URL 출력
 function handleListening() {
@@ -26,7 +29,7 @@ function handleGetHome(req, res) {
 }
 
 // Middleware 정의
-function middleware(req, res, next) {
-  console.log(`GET ${req.url}`);
+function handleSeeUrl(req, res, next) {
+  console.log(`${req.method} ${req.url}`);
   next();
 }
