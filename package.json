@@ -1,0 +1,21 @@
+{
+  "name": "park-yeon-woo-by-vanilla-js",
+  "version": "1.0.0",
+  "description": "for resume",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HyeonWooGa/park-yeon-woo-by-vanilla-js.git"
+  },
+  "author": "Park Yeon Woo<yeonwoopark22@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HyeonWooGa/park-yeon-woo-by-vanilla-js/issues"
+  },
+  "homepage": "https://github.com/HyeonWooGa/park-yeon-woo-by-vanilla-js#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

@@ -9,19 +9,20 @@
 - 프론트엔드
 
   - HTML
-  - CSS
+  - SCSS(Webpack)
   - Vanilla JS
 
 - 백엔드
 
   - NodeJS, Express
 
-- 배포
+- 배포 및 그외
   - Heroku
+  - Babel
 
 ## 페이지구성
 
-- 메인 화면
+- Main
 - About Me
 - Education
 - Portfolio
@@ -29,8 +30,8 @@
 
 ## 기능
 
-- KOR, ENG
-- 다크모드
+- KOR/ENG Mode
+- Ligth/Dark Mode
 
 ## Script
 
