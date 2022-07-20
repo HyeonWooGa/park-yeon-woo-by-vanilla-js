@@ -10,7 +10,7 @@ const app = express();
 app.listen(4000, handleListening);
 
 // GET 요청(request)에 반응(response)
-app.get("/", handleGetHome);
+app.get("/", middleware, handleGetHome);
 
 // 아래에 콜백함수 함수선언식으로 정의, 호이스팅 이용
 
@@ -22,6 +22,11 @@ function handleListening() {
 
 // "/" 페이지 요청시 반응
 function handleGetHome(req, res) {
-  console.log("GET /");
   return res.send("Home Page");
+}
+
+// Middleware 정의
+function middleware(req, res, next) {
+  console.log(`GET ${req.url}`);
+  next();
 }
