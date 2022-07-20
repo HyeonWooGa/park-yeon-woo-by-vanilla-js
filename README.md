@@ -16,8 +16,13 @@
 
   - NodeJS, Express
 
-- 배포 및 유틸리티
+- 배포
+
   - Heroku
+  - AWS
+
+- 유틸리티
+
   - Babel
   - Nodemon
 
@@ -35,7 +40,7 @@
 - KOR/ENG Mode
 - Ligth/Dark Mode
 
-## Script
+## Scripts
 
 ```
 $ npm run dev
