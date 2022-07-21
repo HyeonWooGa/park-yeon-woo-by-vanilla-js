@@ -28,11 +28,11 @@
 
 ## 페이지구성
 
-- Main
-- About Me
-- Education
-- Portfolio
-- Skills
+- Home | /
+- About Me | /about-me
+- Education | /education
+- Portfolio | /portfolio
+- Skills | /skills
 
 ## 기능
 

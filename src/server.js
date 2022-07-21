@@ -1,4 +1,6 @@
 import express from "express";
+import morgan from "morgan";
+import globalRouter from "./routers/globalRouter";
 
 // 포트 번호 지정
 const PORT = 4000;
@@ -6,14 +8,19 @@ const PORT = 4000;
 // 변수에 서버 할당
 const app = express();
 
+// 글로벌 미들웨어로 morgan (logger) 사용
+const logger = morgan("dev");
+
 // 서버 활성화 및 서버 활성화시 콜백함수 호출
 app.listen(4000, handleListening);
 
-// 글로벌 미들웨어
-app.use(handleSeeUrl);
+// --- 아래에 글로벌 미들웨어 사용
 
-// GET 요청(request)에 반응(response)
-app.get("/", handleGetHome);
+// method, url, status, 반응시간 등 확인 미들웨어
+app.use(logger);
+
+// 라우터에 URL 할당 미들웨어
+app.use("/", globalRouter);
 
 // --- 아래에 콜백함수 함수선언식으로 정의, 호이스팅 이용
 
@@ -21,15 +28,4 @@ app.get("/", handleGetHome);
 function handleListening() {
   console.log("Server listening on port 4000 ✅");
   console.log(`URL : http://localhost:${PORT}`);
-}
-
-// "/" 페이지 요청시 반응
-function handleGetHome(req, res) {
-  return res.send("Home Page");
-}
-
-// Middleware 정의
-function handleSeeUrl(req, res, next) {
-  console.log(`${req.method} ${req.url}`);
-  next();
 }
