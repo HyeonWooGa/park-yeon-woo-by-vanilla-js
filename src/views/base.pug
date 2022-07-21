@@ -1,7 +1,25 @@
 doctype html
 html(lang="ko")
     head
-        block head
+        if isNotTitle
+            title #{pageTitle} - 박연우
+        else
+            title 박연우
+        link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+
     body
-        block content
+        main
+            nav 
+                ul
+                    li
+                        a(href="/") 박연우
+                    li
+                        a(href="/about-me") 자기 소개
+                    li
+                        a(href="/portfolio") 포트폴리오
+                    li
+                        a(href="/skills") 기술 스택
+                    li
+                        a(href="/education") 수료 교육
+            block content
         include partials/footer
