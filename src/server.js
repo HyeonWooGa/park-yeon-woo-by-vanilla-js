@@ -14,6 +14,10 @@ const logger = morgan("dev");
 // 서버 활성화 및 서버 활성화시 콜백함수 호출
 app.listen(4000, handleListening);
 
+// 뷰엔진 Pug로 설정 및 뷰 폴더 탐색 주소 설정
+app.set("view engine", "pug");
+app.set("views", process.cwd() + "/src/views");
+
 // --- 아래에 글로벌 미들웨어 사용
 
 // method, url, status, 반응시간 등 확인 미들웨어
